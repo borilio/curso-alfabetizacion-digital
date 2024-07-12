@@ -1,0 +1,1540 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<link href='https://fonts.googleapis.com/css2?family=Fira+Code&display=swap' rel='stylesheet' type='text/css' />
+
+<!-- Inicio trozo meta -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+<link href="/css/estilos.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/img/assets/favicon.png" />
+<meta name="theme-color" content="#4e5965">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04 - Seguridad informática</title>
+<!-- Fin trozo meta -->
+
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+/* try fix https://github.com/typora/typora-issues/issues/5253 */
+.file-node-expanded>.file-node-children {
+    display: grid;
+  }
+
+.md-alert-text-note {
+    color: rgb(47, 129, 247);
+}
+.md-alert-text-important {
+    color: rgb(163, 113, 247);
+}
+.md-alert-text-warning {
+    color:  rgb(210, 153, 34);
+}
+
+/*
+Tema personalizado para usar tipografía FireCode en las partes de código.
+*/
+
+@import url('file:///C://Users//expri//AppData//Roaming//Typora/themes/https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+pre,
+kbd,
+code,
+tt,
+var {
+    font-family: 'Fira Code', Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-variant-ligatures: none;
+}
+</style>
+
+</head>
+<body class='typora-export os-windows'>
+    
+    <!-- Inicio Cabecera -->
+	<header class="h1 fixed-top rounded-bottom-3 navegacion text-light p-2 text-start shadow-lg bg-gradient">
+        <a href="/index.html" title="Volver al índice general"><i class="bi bi-arrow-left-circle"></i></a>
+        <span>Seguridad Informática</span>
+    </header>
+    <div id="top"></div>
+    <!-- Fin Cabecera -->
+    
+    <div class='typora-export-content'>
+<div id='write'  class=''><p>&nbsp;</p><h1 id='índice'><span>Índice</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2"><a class="md-toc-inner" href="#índice">Índice</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n5"><a class="md-toc-inner" href="#👮seguridad-informática">👮Seguridad Informática</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n8"><a class="md-toc-inner" href="#contraseñas-seguras">Contraseñas Seguras</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#características-de-una-contraseña-segura">Características de una contraseña segura</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n23"><a class="md-toc-inner" href="#consejos-para-gestionar-contraseñas">Consejos para gestionar contraseñas</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n31"><a class="md-toc-inner" href="#autenticación-multifactor">Autenticación multifactor</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n48"><a class="md-toc-inner" href="#🤷usuarios">🤷Usuarios</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n69"><a class="md-toc-inner" href="#🎣fraudes-y-phishing">🎣Fraudes y Phishing</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n72"><a class="md-toc-inner" href="#cómo-reconocer-un-intento-de-phishing">Cómo reconocer un intento de phishing</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n97"><a class="md-toc-inner" href="#cómo-protegerse-del-phishing">Cómo protegerse del phishing</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n107"><a class="md-toc-inner" href="#🦠software-malicioso-malware">🦠Software Malicioso (Malware)</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n135"><a class="md-toc-inner" href="#cómo-protegerse-del-malware">Cómo Protegerse del Malware</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n145"><a class="md-toc-inner" href="#🛡️herramientas-de-protección-comunes">🛡️Herramientas de protección comunes</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n151"><a class="md-toc-inner" href="#herramientas-de-protección-en-windows">Herramientas de Protección en Windows</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n200"><a class="md-toc-inner" href="#soluciones-de-terceros">Soluciones de Terceros</a></span></p></div><hr /><h1 id='👮seguridad-informática'><span>👮Seguridad Informática</span></h1><p><span>En la era digital actual, la seguridad informática es crucial </span><strong><span>tanto en el ámbito personal como laboral</span></strong><span>. Proteger nuestros datos personales y profesionales de amenazas cibernéticas se ha vuelto esencial para evitar pérdidas económicas, robo de identidad y otros daños. Conocer los conceptos básicos de seguridad informática nos permite tomar medidas preventivas y reaccionar adecuadamente ante posibles incidentes.</span></p><p><img src="img/04-seguridad/seguridad-informatica-dalle.jpg" referrerpolicy="no-referrer" alt="Una persona vulnerable usando un ordenador en primer plano, y una persona con la máscara de Anonymous acechando en la sombra, representando una amenaza omnipresente en el contexto de la seguridad informática."></p><h1 id='contraseñas-seguras'><span>Contraseñas Seguras</span></h1><p><span>Las contraseñas </span><strong><span>son la primera línea de defensa</span></strong><span> contra accesos no autorizados a nuestras cuentas. Una contraseña segura reduce significativamente el riesgo de que nuestros datos sean comprometidos.</span></p><h2 id='características-de-una-contraseña-segura'><span>Características de una contraseña segura</span></h2><ul><li><p><strong><span>Longitud</span></strong><span>: Al menos 12 caracteres.</span></p></li><li><p><strong><span>Combinación de caracteres</span></strong><span>: Usar una mezcla de letras mayúsculas y minúsculas, números y símbolos.</span></p></li><li><p><strong><span>No usar información personal</span></strong><span>: Evitar usar nombres, fechas, palabras comunes e información personal que mucha gente pueda saber. Recuerda que todo el que te conozca puede saber cuando naciste o el nombre de tu mascota.</span></p></li><li><p><strong><span>Únicas para cada cuenta</span></strong><span>: No reutilizar la misma contraseña en diferentes servicios. Todos los días salen en las noticias que una compañía ha sido hackeada. Si cae una contraseña caen todas.</span></p></li></ul><div class="md-alert md-alert-caution caution"><p><span class='md-alert-text md-alert-text-caution'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</span><br></p><p><span>Usar </span><code>12345</code><span> o </span><code>superman</code><span> es una </span><a href='https://www.lavanguardia.com/cribeo/geek/20150121/47345514106/123456-o-superman-en-la-lista-de-las-contrasenas-mas-utilizadas-y-menos-seguras.html'><span>muy mala idea</span></a><span>. De todas formas, en la actualidad ningún servicio te dejaría usar esas contraseñas.</span></p></div><h2 id='consejos-para-gestionar-contraseñas'><span>Consejos para gestionar contraseñas</span></h2><ul><li><p><strong><span>Utilizar un gestor de contraseñas</span></strong><span>: Herramientas como LastPass o 1Password pueden generar y almacenar contraseñas seguras.</span></p></li><li><p><strong><span>Cambiar contraseñas regularmente</span></strong><span>: Actualizar las contraseñas cada cierto tiempo.</span></p></li><li><p><strong><span>Activar la Autenticación de Dos Factores (2FA)</span></strong><span>: Añade una capa extra de seguridad al requerir una segunda forma de verificación.</span></p></li></ul><h2 id='autenticación-multifactor'><span>Autenticación multifactor</span></h2><p><span>Es un sistema en el que los usuarios se autentican mediante la presentación de múltiples piezas de información u objetos. </span><strong><span>Un sistema multifactor</span></strong><span> </span><strong><span>debería de pedirte al menos dos</span></strong><span> de los siguientes elementos:</span></p><ul><li><p><span>💭 </span><strong><span>Algo que sabes</span></strong><span>: Una contraseña o un pin.</span></p></li><li><p><span>🔑 </span><strong><span>Algo que tienes</span></strong><span>: Algo físico, como un pendrive, una llave, una tarjeta física (bancaría o de acceso), un número de teléfono. </span></p></li><li><p><span>🩻 </span><strong><span>Algo que eres</span></strong><span>: Alguna lectura biométrica, como la huella dactilar, escáner de retina o reconocimiento facial.</span></p></li></ul><p><span>Es un componente de seguridad muy importante, ya que si sólo se usan contraseñas, pueden ser susceptibles de ser atacadas de muchas formas. Al ser los distintos factores de distintas naturalezas, sería mucho más complejo obtener varios de ellos simultáneamente.</span></p><p><span>Es el sistema que usan los bancos (contraseña + SMS) o las cuentas de compañías como Google, Microsoft o Amazon para iniciar sesión en sus servicios. Normalmente encontrarás las opciones para activarlas en la configuración de seguridad o privacidad de cada servicio.</span></p><div style="text-align: center">
+    <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=es" target="_blank" style="
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 30px;                                                                                                                     font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #34B793;
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+    " onmouseover="this.style.backgroundColor='#2C8C42';" onmouseout="this.style.backgroundColor='#34A853';">
+        <img src="img/04-seguridad/logo-googleauth.png" alt="Google Authenticator" style="
+            vertical-align: middle;
+            margin-right: 8px;
+            width: 27px;
+            height: 20px;
+        ">
+        Aplicación Google Authenticator
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.azure.authenticator&hl=es" target="_blank" style="
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 30px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #34B793;
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+    " onmouseover="this.style.backgroundColor='#2C8C42';" onmouseout="this.style.backgroundColor='#34A853';">
+        <img src="img/04-seguridad/logo-microsoftauth.png" alt="Microsoft Authenticator" style="
+            vertical-align: middle;
+            margin-right: 8px;
+            width: 27px;
+            height: 20px;
+        ">
+        Aplicación Microsoft Authenticator
+    </a>
+</div><p><img src="img/04-seguridad/image-20240710131527405.png" referrerpolicy="no-referrer" alt="Pantalla de Configuración de la Seguridad en Google"></p><div class="md-alert md-alert-important important"><p><span class='md-alert-text md-alert-text-important'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</span><br></p><p><span>Asegúrate de añadir métodos de recuperación a tus cuentas importantes (teléfonos y correos alternativos). Si algún día tienes problemas para iniciar sesión, te serán de mucha ayuda para poder recuperar tu cuenta. </span></p><p><span>🚨</span><strong><span>MUY IMPORTANTE</span></strong><span>: Y sobre todo mantenerlos actualizados. No nos sirve de nada tener como método de recuperación el teléfono aquel que dimos de baja hace 3 años o el correo de tu expareja.</span></p></div><h1 id='🤷usuarios'><span>🤷Usuarios</span></h1><p><span>En muchas ocasiones, </span><strong><span>el usuario es considerado el eslabón más débil en la cadena de seguridad informática</span></strong><span>. Esto se debe a que, sin importar cuán avanzadas sean las medidas de seguridad implementadas, un simple error humano puede comprometer la integridad de un sistema. Por lo tanto, es crucial que los usuarios tomen conciencia de su papel y responsabilidad en la protección de la información.</span></p><p><img src="img/04-seguridad/image-20220728102552481.png" referrerpolicy="no-referrer" alt="Imagen de un monitor lleno de postit con contraseñas apuntadas, representando la vulnerabilidad informática por errores humanos"></p><p><span>Tanto en el uso de equipos privados como en entornos laborales, los usuarios deben adoptar ciertas prácticas y comportamientos para fortalecer la seguridad:</span></p><p><strong><span>Conceptos básicos:</span></strong></p><ul><li><p><strong><span>🚨⚠️DESCONFÍA ABSOLUTAMENTE DE TODO⚠️🚨:</span></strong><span> Sea lo que sea, casi seguro que es mentira. Todo. Desconfía de cualquier mensaje, SMS, correo, noticia o aplicación que haya en internet.</span></p></li><li><p><strong><span>Ser precavidos con los correos electrónicos</span></strong><span>: Desconfiar de correos no solicitados, especialmente aquellos que solicitan información personal o financiera. Siempre verificar la autenticidad del remitente antes de tomar cualquier acción.</span></p></li><li><p><strong><span>Navegar con precaución</span></strong><span>: Evitar visitar sitios web sospechosos o descargar archivos de fuentes no confiables. Utilizar navegadores con filtros de seguridad activados.</span></p></li><li><p><strong><span>Mantener la información confidencial</span></strong><span>: No compartir contraseñas ni información sensible a través de canales inseguros. Utilizar métodos de comunicación cifrados para datos críticos.</span></p></li><li><p><strong><span>Actualizar regularmente</span></strong><span>: Asegurarse de que el sistema operativo, aplicaciones y programas de seguridad estén siempre actualizados. Las actualizaciones suelen incluir parches que corrigen vulnerabilidades conocidas.</span></p></li><li><p><strong><span>Utilizar herramientas de seguridad</span></strong><span>: Instalar y mantener activo un software antivirus y antimalware. Configurar firewalls para monitorear el tráfico entrante y saliente.</span></p></li><li><p><strong><span>Ser cuidadosos con los dispositivos físicos</span></strong><span>: No dejar dispositivos como portátiles, teléfonos móviles o USB desatendidos en lugares públicos. Proteger los dispositivos con contraseñas o métodos de autenticación biométrica.</span></p><p>&nbsp;</p></li></ul><h1 id='🎣fraudes-y-phishing'><span>🎣Fraudes y Phishing</span></h1><p><span>El phishing es una </span><strong><span>técnica utilizada por ciberdelincuentes para engañar a las personas</span></strong><span> y obtener información confidencial, como contraseñas o datos bancarios, haciéndose pasar por entidades confiables.</span></p><p><img src="img/04-seguridad/phishing-copilot.jpg" referrerpolicy="no-referrer" alt="Una imagen que represente el phishing con mucha gente en un parque usando sus ordenadores y móviles de forma despreocupada e inocente, y detrás de cada uno de ellos está escondido un hacker intentando pescarlos, simbolizando el intento de engaño."></p><h2 id='cómo-reconocer-un-intento-de-phishing'><span>Cómo reconocer un intento de phishing</span></h2><ul><li><p><strong><span>Remitente desconocido</span></strong><span>: Correos de remitentes desconocidos o sospechosos.</span></p></li><li><p><strong><span>Errores ortográficos y gramaticales</span></strong><span>: Mensajes con errores son una señal de alerta.</span></p></li><li><p><strong><span>Enlaces sospechosos</span></strong><span>: Enlaces que no coinciden con la URL oficial de la entidad.</span></p></li><li><p><strong><span>Solicitudes urgentes</span></strong><span>: Mensajes que crean un sentido de urgencia para tomar acciones inmediatas. Piensa con frialdad y recuerda desconfiar DE TODO.</span></p></li></ul><p><strong><span>Ejemplo:</span></strong></p><p><span>Recibes un SMS con el siguiente texto:</span></p><p><img src="img/04-seguridad/image-20240710134535891.png" referrerpolicy="no-referrer" alt="Captura de un SMS malicioso que lleva a una Web falsa"></p><p><span>Pulsamos sobre el enlace que aparece en el SMS, aunque sea una dirección un poco rara, pero tengo un mes para pagar la multa. Nos lleva a la siguiente página.</span></p><p><img src="img/04-seguridad/image-20240710134725812.png" referrerpolicy="no-referrer" alt="Ejemplo de suplantación de identidad, en este caso de la DGT para que pagues una multa"></p><p><span>Aparente estoy en la web de la DGT, aunque su URL es un poco rara. ¡Ahora resulta que tengo 24 horas para pagar la multa! Empiezan los nervios. Y claro, como son “solo” 35€, pues tendremos que pagarla. Pulsamos en “Pagar la multa”</span></p><p><img src="img/04-seguridad/image-20240710135305035.png" referrerpolicy="no-referrer" alt="Ejemplo de suplantación de identidad, en este caso de la DGT para que pagues una multa"></p><p><span>Para ser la DGT y haberme puesto una multa, me están pidiendo demasiados datos que ya deberían de tener. No me piden la matrícula del coche, que raro. También la página tiene elementos raros por la parte de arriba, pero como estoy nervioso no me doy cuenta de esos detalles. Solo quiero pagar la multa y que termine el infierno. Me invento todos los datos y pulso “Continuar”. ¿Porqué me deja continuar si me inventé todos los datos?</span></p><p><img src="img/04-seguridad/image-20240710135735842.png" referrerpolicy="no-referrer" alt="image-20240710135735842"></p><p><span>Llegamos al ansiado tesoro. Los datos de mi tarjeta de crédito. Obviamente le pondré los datos correctos para que me cobren la multa, no vaya a ser que tenga que pagar más.</span></p><p><span>Al continuar al siguiente paso dará error. Siempre. Y puedes revisarlo mil veces que los datos son los correctos. Pero resulta que ese formulario ha enviado los DATOS VÁLIDOS de mi tarjeta de crédito a otra persona muy mala, que puedes dar por hecho que intentará hacer compras en cualquier negocio online con esos datos. Ya puedes darla de baja lo más rápido posible.</span></p><p><img src="img/04-seguridad/image-20240710140723481.png" referrerpolicy="no-referrer" alt="Ejemplo de suplantación de identidad, en este caso de la DGT para que pagues una multa"></p><div class="md-alert md-alert-caution caution"><p><span class='md-alert-text md-alert-text-caution'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25A.749.749 0 0 1 11 16H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Caution</span><br></p><p><span>Para usar una tarjeta de crédito en internet, solo es necesario el número, la fecha de expiración y el CVV. Los bancos modernos suelen usar otros medios de seguridad como confirmación a través de su app para autorizar compras online o bien limitar las compras a internet, extranjero, cajeros, etc.</span></p></div><h2 id='cómo-protegerse-del-phishing'><span>Cómo protegerse del phishing</span></h2><ul><li><p><strong><span>No hacer clic en enlaces sospechosos</span></strong><span>: Verificar la URL antes de hacer clic. Además, los enlaces pueden tener un texto y llevar a otra página. Ejemplo: </span><a href='https://www.dametodoloquetengasoterajo.com'><span>https://www.bbva.es</span></a><span>.</span></p></li><li><p><strong><span>No compartir información sensible</span></strong><span>: Nunca proporcionar datos personales o financieros a través de correos electrónicos, llamadas telefónicas ni formularios.</span></p></li><li><p><strong><span>Utilizar software de seguridad</span></strong><span>: Antivirus y filtros de correo pueden detectar y bloquear intentos de phishing. Pero recuerda que el mejor antivirus eres tú 🫶.</span></p></li><li><p><strong><span>Sentido común:</span></strong><span> Una entidad de la que eres cliente JAMÁS va a pedirte tus datos. Ya los tiene. Recuerda, desconfía de todo. </span></p></li></ul><h1 id='🦠software-malicioso-malware'><span>🦠Software Malicioso (Malware)</span></h1><p><span>El malware es cualquier software diseñado para dañar, interrumpir u obtener acceso no autorizado a sistemas informáticos.</span></p><p><span>Existen muchos tipos:</span></p><p><img src="img/04-seguridad/image-20220718212451106.png" referrerpolicy="no-referrer" alt="image-20220718212451106"></p><ul><li><p><strong><span>Virus</span></strong><span>: Funcionan igual que los virus del cuerpo humano, infectan archivos &quot;sanos&quot; y se replican a si mismos.</span></p></li><li><p><strong><span>Worms</span></strong><span> (gusanos): Son comos los virus, pero no infectan a archivos sanos, si no que son archivos ejecutables completos (procesos) y no necesitan &quot;inyectar&quot; su código en otros archivos ejecutables. Pueden replicarse por el sistema y la red y aparecer en múltiples ubicaciones. 🐛</span><a href='https://es.wikipedia.org/wiki/ILoveYou'><span>ILOVEYOU fue un gusano famoso</span></a><span>.</span></p></li><li><p><strong><span>Adware</span></strong><span>: Software que muestra anuncios y publicidad sin que te hayas dado cuenta que se instalaron, por no leer😤.</span></p></li><li><p><strong><span>Troyanos</span></strong><span>: Es el mismo concepto que el caballo de Troya. Es un malware que se disfraza de una cosa pero hace otra, como un activador de Office o un Keygen.</span></p></li><li><p><strong><span>Spyware</span></strong><span>: Es un malware que tiene como intención espiarte. Recopilar información, contraseñas, grabar la pantalla, mirar por la cámara, micrófono, lo que necesite.</span></p></li><li><p><strong><span>Keylogger</span></strong><span>: Es un spyware que se centra en grabar todas las pulsaciones de teclado y enviarlas. Se suele hacer para capturar contraseñas, pero también conversaciones, mensajes, etc.</span></p></li><li><p><strong><span>Ransomware</span></strong><span>: Es un software que toma tus datos como rehén, encriptando su acceso, a cambio de dinero.</span></p></li><li><p><strong><span>Botnets</span></strong><span>: Están diseñados para aprovecharse de las máquinas conectadas a internet para realizar alguna función distribuida. Es como si miles de equipos infectados se convirtieran en zombies y, usando tus recursos como la CPU, realizaran alguna tarea sin tu consentimiento. Por ejemplo, minería de bitcoins, o algún tipo de ataque organizado.</span><img src="img/04-seguridad/image-20220718214315456.png" referrerpolicy="no-referrer" alt="Representación de Botnets que usan los pc infectados para minería de bitcoins"></p></li><li><p><strong><span>Backdoor</span></strong><span> (puerta trasera): Es una forma de entrar al sistema por otros medios no convencionales. Es una puerta secreta. Normalmente esas puertas las instalan los atacantes después de acceder al sistema, y así mantienen el acceso para poder entrar más veces. Es posible que te des cuenta que han entrado, pero no descubras esa puerta secreta, por lo que pueden volver a entrar una y otra vez hasta que descubras por donde entran.</span></p></li><li><p><strong><span>Bomba Lógica:</span></strong><span> Es tipo de malware que se instala intencionalmente para que cuando transcurra un evento o un cierto tiempo, se ejecute. Hay un caso popular de bomba lógica que sucedió en 2006, en el que un disgustado administrador de sistemas de un banco hizo estallar una bomba lógica que hizo caer los servicios de la empresa en un intento de bajar el precio de sus acciones. El ex empleado fue capturado, acusado de fraude, y luego condenado a 8 años de prisión. Poca broma.</span></p></li><li><p><strong><span>Rootkit</span></strong><span>: Es una de las más peligrosas, porque pueden hacer de todo. Es un software que permite acceder como administrador al que lo usa, pudiendo obtener o modificar los permisos del sistema tal cual lo haría un administrador. Puede ser difícil de detectar porque puede ocultarse del sistema usando el propio sistema.</span></p><p><img src="img/04-seguridad/rootkit-copilot.jpg" referrerpolicy="no-referrer" alt="Una representación gráfica de un rootkit, un tipo de malware que obtiene control a nivel de administrador sobre un sistema informático, mostrando su naturaleza oculta y dañina dentro de los sistemas informáticos."></p></li></ul><h2 id='cómo-protegerse-del-malware'><span>Cómo Protegerse del Malware</span></h2><ul><li><p><strong><span>Instalar y actualizar software Antivirus</span></strong><span>: Mantener actualizado el software de seguridad.</span></p></li><li><p><strong><span>No descargar archivos de fuentes no confiables</span></strong><span>: Evitar descargar programas y archivos de sitios web dudosos. Siempre usar sus canales y tiendas oficiales.</span></p></li><li><p><strong><span>Mantener el sistema operativo y aplicaciones actualizadas</span></strong><span>: Aplicar las actualizaciones de seguridad regularmente.</span></p></li><li><p><strong><span>Sentido común:</span></strong><span> Lee, lee y vuelve a leer. En la instalación no le des a siguiente, siguiente y siguiente. En una aplicación móvil mira las descargas que tiene, mira los comentarios, mira los permisos, etc. Ten cuidado con lo que instalas y de dónde lo instalas. Desconfía de todo, otra vez.</span></p></li></ul><h1 id='🛡️herramientas-de-protección-comunes'><span>🛡️Herramientas de protección comunes</span></h1><p><span>La protección contra amenazas cibernéticas requiere el uso de diversas herramientas de seguridad que actúan como barreras y mecanismos de detección ante posibles ataques. Estas herramientas son esenciales para mantener nuestros dispositivos y datos seguros frente a malware, intrusiones y otras formas de ciberataques. A continuación, exploraremos algunas de las herramientas más comunes y efectivas disponibles, tanto integradas en el sistema operativo Windows como ofrecidas por proveedores externos.</span></p><p><img src="img/04-seguridad/antivirus-copilot.jpg" alt="Un usuario de PC superprotegido por una armadura, campos de fuerza y armas, frente a amenazas como virus, troyanos y hackers" style="width:50%;" /></p><div class="md-alert md-alert-important important"><p><span class='md-alert-text md-alert-text-important'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</span><br></p><p><span>Las herramientas de protección son indispensables para asegurar nuestros dispositivos y datos en el entorno digital actual. Ya sea utilizando las soluciones integradas en Windows o complementándolas con software de terceros, mantener una buena higiene de seguridad y estar al tanto de las últimas amenazas es fundamental. Seleccionar y configurar adecuadamente estas herramientas puede significar la diferencia entre una red segura y una vulnerable a ataques cibernéticos.</span></p></div><h2 id='herramientas-de-protección-en-windows'><span>Herramientas de Protección en Windows</span></h2><p><img src="img/04-seguridad/image-20240710153329453.png" referrerpolicy="no-referrer" alt="Seguridad de windows, en Windows 11"></p><p><span>Windows proporciona varias herramientas de seguridad que están integradas en el sistema operativo, ofreciendo una línea de defensa robusta y fácil de usar.</span></p><ol start='' ><li><p><strong><span>Windows Defender Antivirus</span></strong></p><ul><li><p><strong><span>Descripción</span></strong><span>: Es un software de protección contra malware que viene preinstalado en todas las versiones modernas de Windows. Ofrece protección en tiempo real contra virus, spyware y otro software malicioso.</span></p></li><li><p><strong><span>Características</span></strong><span>:</span></p><ul><li><p><span>Escaneos automáticos y manuales</span></p></li><li><p><span>Actualizaciones frecuentes de definiciones de virus</span></p></li><li><p><span>Protección en tiempo real</span></p></li></ul></li></ul></li><li><p><strong><span>Windows Firewall</span></strong></p><ul><li><p><strong><span>Descripción</span></strong><span>: Es una herramienta que filtra el tráfico de red y bloquea las conexiones no autorizadas al ordenador.</span></p></li><li><p><strong><span>Características:</span></strong></p><ul><li><p><span>Bloqueo de programas no deseados</span></p></li><li><p><span>Configuración de reglas de tráfico entrante y saliente</span></p></li><li><p><span>Protección de la red</span></p></li></ul></li></ul></li><li><p><strong><span>Windows Security (Centro de Seguridad de Windows)</span></strong></p><ul><li><p><strong><span>Descripción</span></strong><span>: Un centro unificado para gestionar la seguridad del dispositivo, que incluye antivirus, firewall y protección de cuentas.</span></p></li><li><p><strong><span>Características:</span></strong></p><ul><li><p><span>Panel de control centralizado</span></p></li><li><p><span>Supervisión de seguridad y salud del dispositivo</span></p></li><li><p><span>Herramientas de protección de identidad y cuentas</span></p></li></ul></li></ul></li></ol><div class="md-alert md-alert-note note"><p><span class='md-alert-text md-alert-text-note'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</span><br></p><p><span>En Windows 11, todo lo descrito anteriormente está centralizado en la aplicación Seguridad de Windows ➡️</span><img src="img/04-seguridad/image-20240710154326095.png" referrerpolicy="no-referrer" alt="Aplicación Seguridad de Windows 11"></p></div><h2 id='soluciones-de-terceros'><span>Soluciones de Terceros</span></h2><p><span>Además de las herramientas integradas en Windows, </span><strong><span>existen muchas soluciones de terceros</span></strong><span> que pueden ofrecer niveles adicionales de protección y funcionalidades avanzadas. Suelen tener versiones gratuitas con opción a mejoras de pago por suscripción.</span></p><ol start='' ><li><p><strong><a href='https://www.mcafee.com/es-es/index.html'><span>McAfee</span></a></strong></p><ul><li><p><strong><span>Descripción</span></strong><span>: Una solución de seguridad completa que incluye antivirus, firewall, protección web y herramientas de privacidad.</span></p></li><li><p><strong><span>Características:</span></strong></p><ul><li><p><span>Protección contra malware en tiempo real</span></p></li><li><p><span>Gestión de contraseñas</span></p></li><li><p><span>Protección contra phishing</span></p></li></ul></li></ul></li><li><p><strong><a href='https://www.avast.com/es-es/'><span>Avast</span></a></strong></p><ul><li><p><strong><span>Descripción</span></strong><span>: Un software antivirus gratuito y de pago conocido por su eficacia y amplia gama de características.</span></p></li><li><p><strong><span>Características:</span></strong></p><ul><li><p><span>Protección contra virus y malware</span></p></li><li><p><span>Escudos de comportamiento y análisis de red</span></p></li><li><p><span>Herramientas de optimización del sistema</span></p></li></ul></li></ul></li><li><p><strong><a href='https://es.norton.com/'><span>Norton</span></a></strong></p><ul><li><p><strong><span>Descripción</span></strong><span>: Proporciona protección antivirus, firewall, y funciones avanzadas como la protección contra ransomware y la supervisión de la dark web.</span></p></li><li><p><strong><span>Características:</span></strong></p><ul><li><p><span>Protección en tiempo real</span></p></li><li><p><span>Copias de seguridad en la nube</span></p></li><li><p><span>Seguridad para múltiples dispositivos</span></p></li></ul></li></ul></li><li><p><strong><a href='https://www.bitdefender.es/'><span>Bitdefender</span></a></strong></p><ul><li><p><strong><span>Descripción</span></strong><span>: Ofrece una combinación de antivirus, antimalware y herramientas de seguridad adicionales.</span></p></li><li><p><strong><span>Características:</span></strong></p><ul><li><p><span>Protección avanzada contra amenazas</span></p></li><li><p><span>Módulos de protección de datos y privacidad</span></p></li><li><p><span>Herramientas de rendimiento y optimización</span></p></li></ul></li></ul><p>&nbsp;</p></li></ol><div class="md-alert md-alert-warning warning"><p><span class='md-alert-text md-alert-text-warning'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</span><br></p><p><span>🐛🪱🦠🛡️No instales más de un software antivirus en el mismo equipo simultáneamente. Esto puede afectar seriamente el rendimiento y causar interferencias entre ellos. Elige uno y mantén solo ese y sobre todo, el sentido común.</span></p></div></div></div>
+
+<!-- Inicio HTML añadido -->
+<!-- Botón flotante -->
+<a href="#top" title="Volver arriba" class="btn btn-primary btn-floating rounded-circle" >
+    <i class="bi bi-arrow-up"></i>
+</a>
+
+<!-- Footer -->
+<footer class="footer rounded-top-4 bg-gradient mt-5">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-12 mb-2">
+                <a href="https://meridianos.org/" target="_blank">
+                    <img src="/docs/img/assets/logo1.png" alt="Logo 1" class="footer-logo">
+                </a>
+            </div>
+            <div class="col-md-4 col-12 mb-2">
+                <a href="https://www.arelance.com/" target="_blank">
+                    <img src="/docs/img/assets/logo2.png" alt="Logo 2" class="footer-logo">
+                </a>
+            </div>
+            <div class="col-md-4 col-12 mb-2">
+                <img src="/docs/img/assets/logo3.png" alt="Logo 3" class="footer-logo">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Fin HTML añadido -->
+
+
+</body>
+</html>

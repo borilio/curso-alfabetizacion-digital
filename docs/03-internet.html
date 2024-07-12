@@ -1,0 +1,1486 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<link href='https://fonts.googleapis.com/css2?family=Fira+Code&display=swap' rel='stylesheet' type='text/css' />
+
+<!-- Inicio trozo meta -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+<link href="/css/estilos.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/img/assets/favicon.png" />
+<meta name="theme-color" content="#4e5965">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 - Internet</title>
+<!-- Fin trozo meta -->
+
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+/* try fix https://github.com/typora/typora-issues/issues/5253 */
+.file-node-expanded>.file-node-children {
+    display: grid;
+  }
+
+.md-alert-text-note {
+    color: rgb(47, 129, 247);
+}
+.md-alert-text-important {
+    color: rgb(163, 113, 247);
+}
+.md-alert-text-warning {
+    color:  rgb(210, 153, 34);
+}
+
+/*
+Tema personalizado para usar tipografía FireCode en las partes de código.
+*/
+
+@import url('file:///C://Users//expri//AppData//Roaming//Typora/themes/https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+pre,
+kbd,
+code,
+tt,
+var {
+    font-family: 'Fira Code', Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-variant-ligatures: none;
+}
+</style>
+</head>
+<body class='typora-export os-windows'>
+    
+    <!-- Inicio Cabecera -->
+	<header class="h1 fixed-top rounded-bottom-3 navegacion text-light p-2 text-start shadow-lg bg-gradient">
+        <a href="/index.html" title="Volver al índice general"><i class="bi bi-arrow-left-circle"></i></a>
+        <span>Internet</span>
+    </header>
+    <div id="top"></div>
+    <!-- Fin Cabecera -->
+    
+    <div class='typora-export-content'>
+<div id='write'  class=''><p>&nbsp;</p><h1 id='índice'><span>Índice</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2"><a class="md-toc-inner" href="#índice">Índice</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n6"><a class="md-toc-inner" href="#🌐introducción-a-internet">🌐Introducción a Internet</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n9"><a class="md-toc-inner" href="#historia-y-evolución">Historia y Evolución</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n19"><a class="md-toc-inner" href="#funcionamiento-básico">Funcionamiento Básico</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n31"><a class="md-toc-inner" href="#importancia-de-internet">Importancia de Internet</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n45"><a class="md-toc-inner" href="#🧭navegadores-web">🧭Navegadores Web</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n54"><a class="md-toc-inner" href="#los-más-populares">Los más populares</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n123"><a class="md-toc-inner" href="#funciones-principales">Funciones principales</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n139"><a class="md-toc-inner" href="#descargas">Descargas</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n158"><a class="md-toc-inner" href="#búsquedas">Búsquedas</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n174"><a class="md-toc-inner" href="#consejos-para-una-búsqueda-efectiva">Consejos para una Búsqueda Efectiva</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n184"><a class="md-toc-inner" href="#motores-de-búsqueda">Motores de búsqueda</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n194"><a class="md-toc-inner" href="#✨inteligencia-artificial">✨Inteligencia Artificial</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n196"><a class="md-toc-inner" href="#inteligencia-artificial-generativa">Inteligencia Artificial Generativa</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n220"><a class="md-toc-inner" href="#chat-gpt">Chat GPT</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n230"><a class="md-toc-inner" href="#microsoft-copilot">Microsoft Copilot</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n245"><a class="md-toc-inner" href="#google-gemini">Google Gemini</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n259"><a class="md-toc-inner" href="#📧correo-electrónico">📧Correo electrónico</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n262"><a class="md-toc-inner" href="#servicios-de-correo-electrónico-más-usados">Servicios de correo electrónico más usados</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n296"><a class="md-toc-inner" href="#glosario-de-términos-básicos">Glosario de Términos Básicos</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n314"><a class="md-toc-inner" href="#agrupaciones-más-comunes">Agrupaciones más comunes</a></span></p></div><hr /><p>&nbsp;</p><h1 id='🌐introducción-a-internet'><span>🌐Introducción a Internet</span></h1><p><strong><span>Internet</span></strong><span> es una red global de computadoras interconectadas que permite la comunicación y el intercambio de información a nivel mundial. Es como una red gigantesca de carreteras digitales que conecta a personas, empresas, instituciones y gobiernos en todo el mundo.</span></p><p><img src="img/03-internet/internet-segun-copilot.jpeg" referrerpolicy="no-referrer" alt="Representación artística de Internet como una red global de computadoras interconectadas para el intercambio de información a nivel mundial"></p><h2 id='historia-y-evolución'><span>Historia y Evolución</span></h2><ul><li><p><strong><span>Orígenes</span></strong><span>: Internet se originó en los años 60 como un proyecto de investigación del Departamento de Defensa de los Estados Unidos (ARPANET), con el objetivo de crear una red robusta y descentralizada que pudiera resistir a fallas y ataques.</span></p></li><li><p><strong><span>Crecimiento</span></strong><span>: En las décadas siguientes, Internet se expandió rápidamente a través de protocolos estándar como TCP/IP, que permiten la transmisión de datos de manera eficiente y confiable.</span></p></li><li><p><strong><span>Web y navegadores</span></strong><span>: En los años 90, la creación del World Wide Web (WWW) por Tim Berners-Lee marcó el inicio de la era moderna de Internet, facilitando el acceso a información mediante hipervínculos y páginas web. Los navegadores como Netscape Navigator y posteriormente Internet Explorer popularizaron el acceso fácil y visual a la web.</span></p></li><li><p><strong><span>Expansión global</span></strong><span>: En las últimas décadas, Internet ha crecido exponencialmente, conectando a más de 5.4 mil millones de personas en todo el mundo en 2024, </span><a href='https://www.france24.com/es/minuto-a-minuto/20230913-un-tercio-de-la-poblaci%C3%B3n-mundial-sigue-privada-de-acceso-a-internet'><span>según estadísticas de la UIT</span></a><span> (Unión Internacional de Telecomunicaciones).</span></p></li></ul><h2 id='funcionamiento-básico'><span>Funcionamiento Básico</span></h2><p><span>Internet funciona mediante una infraestructura física y lógica compleja:</span></p><ul><li><p><strong><span>Infraestructura física</span></strong><span>: Consiste en cables de fibra óptica, satélites, antenas y otros medios de transmisión que permiten la interconexión global.</span></p></li><li><p><strong><span>Protocolos de comunicación</span></strong><span>: Los datos se transmiten a través de protocolos estándar como TCP/IP (Protocolo de Control de Transmisión/Protocolo de Internet), que aseguran la correcta transmisión y recepción de la información.</span></p></li><li><p><strong><span>Servidores y clientes</span></strong><span>: La información se almacena en servidores, que son computadoras especializadas, y se accede a ella mediante clientes como navegadores web y aplicaciones.</span></p></li></ul><div class="md-alert md-alert-tip tip"><p><span class='md-alert-text md-alert-text-tip'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</span><br></p><p><span>Dentro del contexto de Internet, un protocolo es un </span><strong><span>conjunto de reglas y estándares</span></strong><span> que define cómo se </span><strong><span>comunican y se intercambian datos</span></strong><span> las computadoras conectadas a la red. Estas reglas aseguran que la información se transmita de manera eficiente, segura y comprensible entre dispositivos diferentes. </span></p></div><h2 id='importancia-de-internet'><span>Importancia de Internet</span></h2><p><span>Internet ha transformado la manera en que interactuamos, trabajamos, aprendemos y nos entretenemos. Sus principales beneficios incluyen:</span></p><ul><li><p><strong><span>Acceso a la información</span></strong><span>: Facilita el acceso instantáneo a una vasta cantidad de datos y conocimientos.</span></p></li><li><p><strong><span>Comunicación</span></strong><span>: Permite la comunicación en tiempo real a través de correos electrónicos, redes sociales, videoconferencias, entre otros.</span></p></li><li><p><strong><span>Comercio y economía</span></strong><span>: Impulsa el comercio electrónico y la globalización de los negocios.</span></p></li><li><p><strong><span>Educación y aprendizaje</span></strong><span>: Ofrece recursos educativos y plataformas de aprendizaje en línea accesibles desde cualquier lugar.</span></p></li><li><p><strong><span>Innovación y desarrollo</span></strong><span>: Fomenta la innovación tecnológica y el desarrollo de nuevas aplicaciones y servicios.</span></p></li></ul><hr /><h1 id='🧭navegadores-web'><span>🧭Navegadores Web</span></h1><p><span>Los </span><strong><span>navegadores web</span></strong><span> son aplicaciones diseñadas para acceder y visualizar páginas web en Internet. Funcionan como intermediarios entre el usuario y la vasta cantidad de información disponible en la web. Algunos de los navegadores más populares incluyen Google Chrome, Mozilla Firefox, Microsoft Edge, Safari y Opera. Cada uno ofrece características únicas pero </span><strong><span>todos comparten funciones básicas</span></strong><span>:</span></p><ul><li><p><strong><span>Interfaz gráfica</span></strong><span>: Permiten la navegación mediante una interfaz gráfica intuitiva que muestra páginas web y permite interactuar con ellas a través de clics, formularios, botones y otros elementos.</span></p></li><li><p><strong><span>Motor de renderizado</span></strong><span>: Interpretan el código HTML, CSS y JavaScript de las páginas web para mostrar contenido multimedia, como texto, imágenes, videos y animaciones.</span></p></li><li><p><strong><span>Funcionalidades adicionales</span></strong><span>: Incluyen características como la gestión de marcadores, la sincronización entre dispositivos, extensiones para ampliar funcionalidades y herramientas de seguridad.</span></p></li></ul><h2 id='los-más-populares'><span>Los más populares</span></h2><p><img src="img/03-internet/navegadores-web.jpg" referrerpolicy="no-referrer" alt="Los 10 navegadores de Internet más usados del mercado"></p><ol start='' ><li><p><strong><span>Google Chrome</span></strong><span>: Desarrollado por Google, es conocido por su velocidad, estabilidad y compatibilidad con numerosas extensiones. Es el navegador más utilizado a nivel mundial.</span></p></li><li><p><strong><span>Mozilla Firefox</span></strong><span>: Conocido por su enfoque en la privacidad y la personalización. Es de código abierto y ofrece una amplia gama de extensiones para adaptarse a diferentes necesidades.</span></p></li><li><p><strong><span>Microsoft Edge</span></strong><span>: Sucesor de Internet Explorer, Edge está integrado en el sistema operativo Windows y se destaca por su integración con servicios de Microsoft y su enfoque en la seguridad y la productividad.</span></p></li><li><p><strong><span>Safari</span></strong><span>: El navegador predeterminado en los dispositivos Apple (Mac, iPhone, iPad). Es conocido por su rendimiento eficiente y su integración con el ecosistema Apple.</span></p></li><li><p><strong><span>Opera</span></strong><span>: Ofrece características únicas como un VPN integrado, bloqueo de anuncios y un modo de ahorro de batería, lo que lo hace popular entre usuarios que valoran la privacidad y la eficiencia.</span></p></li></ol><p><span>Aquí te dejamos una tabla con los principales navegadores y sus enlaces de descarga. También verás los usuarios aproximados de cada uno para que te hagas una idea de la popularidad de cada uno.</span></p><figure class='table-figure'><table><thead><tr><th><strong><span>Nombre</span></strong></th><th><strong><span>Descripción</span></strong></th><th><strong><span>Dirección de descarga</span></strong></th><th><strong><span>Nº de usuarios (aprox.)</span></strong></th></tr></thead><tbody><tr><td><strong><span>Google Chrome</span></strong></td><td><span>Navegador rápido y seguro con funciones inteligentes integradas de Google.</span></td><td><a href='https://www.google.com/chrome/' target='_blank' class='url'>https://www.google.com/chrome/</a></td><td><span>3.200 millones</span></td></tr><tr><td><strong><span>Safari</span></strong></td><td><span>Navegador de Apple conocido por su velocidad y eficiencia en dispositivos iOS.</span></td><td><a href='https://www.apple.com/safari/' target='_blank' class='url'>https://www.apple.com/safari/</a></td><td><span>1.000 millones</span></td></tr><tr><td><strong><span>Microsoft Edge</span></strong></td><td><span>Navegador de Microsoft basado en Chromium, optimizado para Windows 10 y 11.</span></td><td><a href='https://www.microsoft.com/edge' target='_blank' class='url'>https://www.microsoft.com/edge</a></td><td><span>600 millones</span></td></tr><tr><td><strong><span>Firefox</span></strong></td><td><span>Navegador de código abierto de Mozilla, enfocado en la privacidad y seguridad.</span></td><td><a href='https://www.mozilla.org/firefox' target='_blank' class='url'>https://www.mozilla.org/firefox</a></td><td><span>300 millones</span></td></tr><tr><td><strong><span>Opera</span></strong></td><td><span>Navegador con bloqueador de anuncios integrado y VPN gratuita.</span></td><td><a href='https://www.opera.com' target='_blank' class='url'>https://www.opera.com</a></td><td><span>80 millones</span></td></tr><tr><td><strong><span>Samsung Internet</span></strong></td><td><span>Navegador optimizado para dispositivos Samsung con funciones de privacidad.</span></td><td><a href='https://www.samsung.com/internet' target='_blank' class='url'>https://www.samsung.com/internet</a></td><td><span>400 millones</span></td></tr><tr><td><strong><span>Brave</span></strong></td><td><span>Navegador centrado en la privacidad con bloqueador de anuncios y rastreadores.</span></td><td><a href='https://brave.com' target='_blank' class='url'>https://brave.com</a></td><td><span>50 millones</span></td></tr><tr><td><strong><span>Vivaldi</span></strong></td><td><span>Navegador personalizable con herramientas avanzadas para usuarios expertos.</span></td><td><a href='https://vivaldi.com' target='_blank' class='url'>https://vivaldi.com</a></td><td><span>2 millones</span></td></tr><tr><td><strong><span>Tor</span></strong></td><td><span>Navegador especializado en proteger al usuario del rastreo, la vigilancia y la censura.</span></td><td><a href='https://www.torproject.org/es/' target='_blank' class='url'>https://www.torproject.org/es/</a></td><td><span>2 millones</span></td></tr></tbody></table></figure><div class="md-alert md-alert-tip tip"><p><span class='md-alert-text md-alert-text-tip'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</span><br></p><p><span>Muchos navegadores deben su popularidad y número de usuarios debido a que vienen preinstalados en muchos dispositivos, ya sean del fabricante o por acuerdos con otros fabricantes.</span></p></div><p>&nbsp;</p><h2 id='funciones-principales'><span>Funciones principales</span></h2><ul><li><p><strong><span>Navegación por pestañas</span></strong><span>: Permite abrir varias páginas web en una sola ventana y cambiar fácilmente entre ellas.</span></p><p><img src="img/03-internet/image-20240709140158477.png" referrerpolicy="no-referrer" alt="Ejemplo de navegación por pestañas en Google Chrome"></p></li><li><p><strong><span>Barra de direcciones</span></strong><span>: Donde se introduce la URL (Uniform Resource Locator) de la página web a la que se quiere acceder.</span></p><p><img src="img/03-internet/image-20240709140239892.png" referrerpolicy="no-referrer" alt="Ejemplo de barra de direcciones en Google Chrome"></p></li><li><p><strong><span>Marcadores y historial</span></strong><span>: Facilitan guardar y organizar páginas web favoritas y acceder rápidamente al historial de navegación. Las web favoritas suelen llamarse </span><strong><span>marcadores</span></strong><span> o </span><strong><span>favoritos</span></strong><span> y suelen tener asociado el icono de una estrella ⭐.</span></p><p><img src="img/03-internet/image-20240709140318909.png" referrerpolicy="no-referrer" alt="Ejemplo de barra de favoritos en Microsoft Edge"></p></li><li><p><strong><span>Privacidad y seguridad</span></strong><span>: Incluyen funciones como bloqueo de ventanas emergentes, protección contra sitios web maliciosos y la opción de navegar de forma privada (modo incógnito).</span></p><p><img src="img/03-internet/image-20240709140425690.png" referrerpolicy="no-referrer" alt="Ejemplo de Navegación privada en Google Chrome"></p><p>&nbsp;</p></li></ul><p><span>              </span></p><h2 id='descargas'><span>Descargas</span></h2><p><span>Las descargas en los navegadores web permiten a los usuarios </span><strong><span>guardar archivos desde Internet en sus dispositivos locales</span></strong><span>. Este proceso sigue una serie de pasos que aseguran la integridad y la seguridad de los archivos descargados:</span></p><p><img src="img/03-internet/Archivo descargado de internet.gif" referrerpolicy="no-referrer" alt="Animación de proceso de descarga"></p><ol start='' ><li><p><strong><span>Iniciando una Descarga:</span></strong><span> Cuando un usuario decide descargar un archivo desde una página web, generalmente lo hace al </span><strong><span>hacer clic en un enlace</span></strong><span> de descarga o un botón específico. Esto le indica al navegador que debe transferir el archivo desde el servidor remoto a su dispositivo local.</span></p></li><li><p><strong><span>Gestión de Descargas:</span></strong><span> El navegador </span><strong><span>gestiona las descargas mostrando información relevante al usuario</span></strong><span>, como el tamaño del archivo y el tiempo estimado de descarga. También permite al usuario elegir la ubicación donde desea guardar el archivo descargado en su dispositivo. Normalmente, suele descargarse por defecto en la carpeta </span><code>Descargas</code><span>.</span></p></li><li><p><strong><span>Proceso de Transferencia:</span></strong><span> Durante la descarga, </span><strong><span>el navegador establece una conexión con el servidor</span></strong><span> remoto a través del protocolo HTTP, HTTPS u otros protocolos dependiendo del tipo de contenido. Utiliza el protocolo de transferencia de archivos adecuado para asegurar que los datos se transmitan de manera íntegra y eficiente. Tranquilidad, el navegador lo hará por tí 😏.</span></p></li><li><p><strong><span>Verificación y Seguridad:</span></strong><span> Los navegadores modernos realizan verificaciones de seguridad automáticas durante las descargas para proteger al usuario contra archivos maliciosos. Esto incluye análisis de virus y malware, así como la comprobación de la autenticidad de los certificados de seguridad de la página web desde donde se realiza la descarga.</span></p></li><li><p><strong><span>Descarga completada:</span></strong><span> Una vez completada la descarga, el navegador notifica al usuario, generalmente con una notificación emergente o mediante un icono específico en la interfaz. El archivo descargado está disponible en la ubicación especificada por el usuario para su acceso inmediato.</span></p></li></ol><div class="md-alert md-alert-tip tip"><p><span class='md-alert-text md-alert-text-tip'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</span><br></p><p><span>🧑‍🏫Prueba a descargar la imagen anterior (la del proceso de descarga) haciendo sobre la imagen</span><code>Clic derecho</code><span> &gt; </span><code>Guardar imagen como...</code><span>. </span></p><p><span>Así podrás probar como se descarga y se guarda el archivo en tu equipo. También puedes descargar cualquier navegador que explicamos en el punto anterior.</span></p></div><p>&nbsp;</p><h2 id='búsquedas'><span>Búsquedas</span></h2><p><span>Realizar una búsqueda en Internet es un proceso sencillo que te permite encontrar información específica en la web. Veremos como hacerlo:</span></p><ol start='' ><li><p><strong><span>Abrir un Navegador</span></strong><span>: Inicia tu navegador web favorito, como Google Chrome, Firefox, Safari o cualquier otro.</span></p></li><li><p><strong><span>Ingresar la Consulta</span></strong><span>: En la barra de direcciones o en el campo de búsqueda del navegador, escribe lo que estás buscando. Por ejemplo, &quot;recetas de cocina&quot;, &quot;mejores destinos para vacaciones&quot;, o &quot;cómo aprender programación&quot;.</span></p><p><img src="img/03-internet/image-20240709144606795.png" referrerpolicy="no-referrer" alt="Ejemplo de búsqueda usando la barra de búsqueda"></p></li><li><p><strong><span>Presionar Enter o Hacer Clic en Buscar</span></strong><span>: Una vez que hayas escrito tu consulta, presiona la tecla </span><kbd><span>Enter</span></kbd><span> en tu teclado o haz clic en el botón de búsqueda (generalmente una lupa) en la barra de búsqueda.</span></p></li><li><p><strong><span>Ver los Resultados</span></strong><span>: El navegador te mostrará una página con una lista de resultados relevantes a tu búsqueda. Cada resultado incluirá un título, una breve descripción y una URL que te llevará al sitio web correspondiente.</span></p><p><img src="img/03-internet/image-20240709144722553.png" referrerpolicy="no-referrer" alt="Resultados de buscar “Brad Pitt en falda en la barra de búsqueda de Google Chrome”"></p></li><li><p><strong><span>Explorar los Resultados</span></strong><span>: Puedes hacer clic en cualquier resultado para abrir la página web y encontrar más información sobre el tema que buscas. Normalmente se ofrecerán resultados más relevantes agrupados por: </span><code>Todo</code><span>, </span><code>Imágenes</code><span>, </span><code>Vídeos</code><span>, </span><code>Noticias</code><span>, etc. En nuestro ejemplo, como hemos buscado algo visual, directamente nos ha mostrado inicialmente </span><code>Imágenes</code><span>, y después ha mostrado </span><code>Noticias</code><span> (aunque no se ven en la captura).</span></p></li></ol><p>&nbsp;</p><h3 id='consejos-para-una-búsqueda-efectiva'><span>Consejos para una Búsqueda Efectiva</span></h3><p><span>Muchas veces buscar algo concreto en Internet es como entrar a una selva profunda sin machete. Encontrarás muchisimos resultados que no son los que tu estás buscando, por lo que tendrás que filtrar entre mucha maleza la información que quieres. Siempre encontraremos información que no queremos, pero es importante seguir los siguientes consejos para aumentar las posibilidades de encontrar lo que queremos.</span></p><p><img src="img/03-internet/selva-machete.gif" referrerpolicy="no-referrer" alt="Reality TV gif. Man on Kicking and Screaming swings a machete over his shoulder like he’s ready to cut something in front of him, but he accidentally gets the tip stuck in the tree behind him."></p><ul><li><p><strong><span>Utiliza Palabras Clave</span></strong><span>: Usa términos específicos relacionados con lo que estás buscando. Evita las generalizaciones o ambigüedades.</span></p></li><li><p><strong><span>Refina tu Búsqueda</span></strong><span>: Si los resultados no son lo que esperabas, prueba agregar más detalles a tu consulta.</span></p></li><li><p><strong><span>Filtra los Resultados</span></strong><span>: Algunos motores de búsqueda te permiten usar filtros para encontrar resultados más específicos, como imágenes, videos o noticias.</span></p></li></ul><h3 id='motores-de-búsqueda'><span>Motores de búsqueda</span></h3><p><span>Los motores de búsqueda son sistemas informáticos diseñados para ayudar a los usuarios a encontrar información específica en la vasta red de Internet. Utilizan algoritmos complejos para rastrear y catalogar contenido web, permitiendo a los usuarios buscar términos clave y recibir resultados relevantes en cuestión de segundos.</span></p><p><span>Mientras que un navegador web es la herramienta que utilizas para acceder y explorar Internet, un motor de búsqueda es la herramienta que utilizas dentro del navegador para encontrar información específica en la web.</span></p><p><span>Normalmente cada navegador tiene su motor de búsqueda predeterminado pero siempre pueden cambiarse de una forma u otra. A veces de una forma rebuscada dentro de sus opciones de configuración, u otras veces lo hacen de forma obligada debido a la </span><a href='https://computerhoy.com/tecnologia/chrome-te-obligara-elegir-motor-busqueda-favorito-partir-fecha-1347506'><span>Ley de Mercados Digitales (DMA) de la Unión Europea</span></a><span>, que intenta evitar prácticas anticompetitivas por parte de grandes empresas tecnológicas.</span></p><p><img src="img/03-internet/image-20240709144432532.png" referrerpolicy="no-referrer" alt="Selección de motores de búsqueda en Google Chrome, obligado por la ley DMA"></p><div class="md-alert md-alert-warning warning"><p><span class='md-alert-text md-alert-text-warning'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</span><br></p><p><span>Microsoft Edge usa Bing como motor de búsqueda predeterminado. Google Chrome usaba Google hasta que le obligaron a que mostrara unos cuántos motores de búsqueda y dejara al usuario decidir cual quiere usar.</span></p></div><p>&nbsp;</p><p><span>Según el motor de búsqueda que uses podrás obtener mejores o peores resultados. Unos recopilan más información que otros por lo que pueden afinar más los resultados que otros. Generalmente con Google obtendrás los mejores resultados pero también cedes mucha información a cambio. La elección es tuya ⚖️.</span></p><h1 id='✨inteligencia-artificial'><span>✨Inteligencia Artificial</span></h1><p><span>La inteligencia artificial (IA) es una rama de la informática que se dedica a crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. Estas tareas incluyen el reconocimiento de voz, la toma de decisiones, la traducción de idiomas y mucho más.</span></p><h2 id='inteligencia-artificial-generativa'><span>Inteligencia Artificial Generativa</span></h2><p><span>La </span><strong><span>inteligencia artificial generativa</span></strong><span> es una rama de la IA que se centra en la </span><strong><span>creación de contenido nuevo</span></strong><span> y original a partir de datos existentes. Utiliza modelos avanzados de aprendizaje automático para </span><strong><span>generar texto, imágenes, música, videos y más</span></strong><span>. Por ejemplo, puede escribir un poema, crear una obra de arte digital o componer una melodía.</span></p><p><img src="img/03-internet/1280px-Théâtre_D’opéra_Spatial.png" referrerpolicy="no-referrer" alt="A detailed oil painting of figures in a futuristic opera scene"></p><div class="md-alert md-alert-tip tip"><p><span class='md-alert-text md-alert-text-tip'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</span><br></p><p><em><strong><span>Théâtre d&#39;Opéra Spatial</span></strong></em><span> (Teatro de Ópera Espacial) es una pintura creada por Jason M. Allen utilizando la plataforma de Inteligencia Artificial generativa </span><a href='https://es.wikipedia.org/wiki/Midjourney'><span>Midjourney</span></a><span>. La pintura se convirtió en noticia cuando ganó el concurso anual de bellas artes de la Feria Estatal de Colorado el 5 de septiembre de 2022, convirtiéndose en una de las primeras imágenes generadas por IA en ganar un premio.</span></p></div><p><span>Esta tecnología es especialmente útil en aplicaciones como los </span><strong><span>chatbots</span></strong><span>, la creación de contenido multimedia y el diseño de productos, ya que puede producir resultados creativos y personalizados en respuesta a las indicaciones del usuario.</span></p><p><span>Podemos destacar varios chatbots gratuitos (con modelos de pago superiores mejorados) que podemos usar para realizar tareas cotidianas y en el trabajo. De todos ellos podremos realizar las siguientes tareas (cada uno a su forma):</span></p><ul><li><p><strong><span>Asistencia en la redacción</span></strong><span>: pueden ayudar a escribir correos electrónicos, artículos, informes y otros documentos, proporcionando sugerencias y completando frases.</span></p></li><li><p><strong><span>Resolución de dudas</span></strong><span>: Al igual que una búsqueda en internet, pueden responder preguntas de manera directa y concisa, ahorrando tiempo al no tener que filtrar información.</span></p></li><li><p><strong><span>Aprendizaje y educación</span></strong><span>: Puede explicar conceptos complejos de manera sencilla, lo que lo convierte en una herramienta útil para estudiantes y profesores.</span></p></li><li><p><strong><span>Atención al cliente</span></strong><span>: pueden ser utilizados en proporcionar soporte y resolver consultas comunes de los clientes de manera eficiente.</span></p></li><li><p><strong><span>Traducción de idiomas</span></strong><span>: pueden traducir textos de un idioma a otro de manera precisa.</span></p></li><li><p><strong><span>Generar código:</span></strong><span> pueden ayudarte a programar. Entienden y generan código en multitud de lenguajes de programación.</span></p></li><li><p><strong><span>Aplicaciones móviles:</span></strong><span> Todos poseen su respectiva aplicación móvil para tener todo el conocimiento en la palma de tu mano 🤓.</span></p></li></ul><p><span>                            </span></p><h3 id='chat-gpt'><span>Chat GPT</span></h3><p><img src="img/03-internet/1690998329chatgpt-logo-with-text.png" alt="Logo de Chat GPT" width="60%" /></p><p><span>ChatGPT es un modelo de lenguaje avanzado desarrollado por OpenAI. Utiliza inteligencia artificial para generar texto de manera coherente y natural en respuesta a las preguntas y solicitudes de los usuarios. Está basado en la arquitectura GPT-3.5 y ha sido entrenado con grandes cantidades de texto para realizar una variedad de tareas relacionadas con el lenguaje.</span></p><blockquote><p><span>🤖Página web </span><a href='https://chatgpt.com/' target='_blank' class='url'>https://chatgpt.com/</a></p></blockquote><ul><li><p><span>Usa GPT 3.5 de OpenIA.</span></p></li><li><p><span>Usa datos actualizados hasta octubre de 2023. Si necesitas datos recientes o específicos que hayan ocurrido después, no podrá proporcionarlos.</span></p></li></ul><h3 id='microsoft-copilot'><span>Microsoft Copilot</span></h3><p><img src="img/03-internet/microsoft-copilot-logo.png" alt="Logo de Microsoft Copilot" width="60%" /></p><p><span>Microsoft Copilot es una herramienta de IA integrada en aplicaciones de Microsoft 365 como Word, Excel y Teams. Ayuda a los usuarios a ser más productivos al proporcionar sugerencias y automatizar tareas.</span></p><blockquote><p><span>🤖Página web </span><a href='https://copilot.microsoft.com' target='_blank' class='url'>https://copilot.microsoft.com</a></p></blockquote><ul><li><p><span>Usa GPT 4 de OpenIA. Un modelo de lenguaje más avanzado que ChatGPT.</span></p></li><li><p><span>Usa datos actualizados instantáneos. Podrás preguntarle cosas que han pasado hace minutos.</span></p></li><li><p><span>Puede generar imágenes usando </span><a href='https://es.wikipedia.org/wiki/Dall-e'><span>Dall·E</span></a><span> 3.</span></p></li><li><p><span>Puede describir imágenes.</span></p></li></ul><p>&nbsp;</p><h3 id='google-gemini'><span>Google Gemini</span></h3><p><img src="img/03-internet/Google_Gemini_logo.svg" alt="Logo Google Gemini" width="60%" /></p><p><span>Google Gemini es una plataforma de IA desarrollada por Google que se enfoca en la generación de texto y la comprensión del lenguaje natural. Es útil para obtener respuestas rápidas y precisas a preguntas específicas. Tiene la ventaja de integrarse en todo el ecosistema de aplicaciones de Google.</span></p><blockquote><p><span>🤖Página web </span><a href='https://gemini.google.com/' target='_blank' class='url'>https://gemini.google.com/</a></p></blockquote><ul><li><p><span>Tiene su propio modelo de lenguaje desarrollado por Google, llamado </span><strong><span>Gemini</span></strong><span>. Este modelo se basa en la familia de modelos </span><strong><span>PaLM 2</span></strong><span>, de Google AI, y no utiliza GPT de OpenAI.</span></p></li><li><p><span>Puede describir imágenes.</span></p><p><img src="img/03-internet/image-20240710104300856.png" alt="Ejemplo de descripción de imágenes usando Gemini" width="50%" /></p></li><li><p><span>Se puede instalar como asistente de voz en un dispositivo móvil. Puedes </span><a href='https://play.google.com/store/apps/details?id=com.google.android.apps.bard' target="_blank"><span>encontrarlo en la tienda de aplicaciones de android</span></a><span>.</span></p></li></ul><p><img src="img/03-internet/image-20240710103047471.png" alt="Captura de pantalla de un móvil usando Google Gemini como asistente de voz" width="50%" /></p><h1 id='📧correo-electrónico'><span>📧Correo electrónico</span></h1><p><span>El </span><strong><span>correo electrónico</span></strong><span> es un método de comunicación digital que permite a los usuarios enviar y recibir mensajes a través de Internet. Es una de las formas más antiguas y ampliamente utilizadas de comunicación en línea, esencial para la correspondencia personal y profesional.</span></p><p><img src="img/03-internet/envio-correo-dalle.jpeg" referrerpolicy="no-referrer" alt="La esencia del envío de correo electrónico, según Dall-E"></p><h2 id='servicios-de-correo-electrónico-más-usados'><span>Servicios de correo electrónico más usados</span></h2><p><span>A continuación, se presenta una tabla con los servicios de correo electrónico más populares, una breve descripción de cada uno y un enlace para crear una cuenta:</span></p><figure class='table-figure'><table><thead><tr><th><strong><span>Servicio</span></strong></th><th><strong><span>Descripción</span></strong></th><th><strong><span>Enlace para Crear Cuenta</span></strong></th></tr></thead><tbody><tr><td><strong><span>Gmail</span></strong></td><td><span>Ofrecido por Google, conocido por su interfaz intuitiva y su integración con otros servicios de Google como Google Drive y Google Calendar. Si tienes un móvil android, tienes obligatoriamente una cuenta de GMail.</span></td><td><a href='https://accounts.google.com/signup'><span>Crear cuenta de Google</span></a></td></tr><tr><td><strong><span>Outlook</span></strong></td><td><span>Ofrecido por Microsoft, integra funciones de calendario, contactos y tareas, y es compatible con las aplicaciones de Office 365. Anteriormente conocido como Hotmail 👴👵.</span></td><td><a href='https://signup.live.com'><span>Crear cuenta de Microsoft</span></a></td></tr><tr><td><strong><span>Yahoo Mail</span></strong></td><td><span>Ofrecido por Yahoo, proporciona una amplia capacidad de almacenamiento y una interfaz fácil de usar.</span></td><td><a href='https://login.yahoo.com/account/create'><span>Crear cuenta en Yahoo Mail</span></a></td></tr><tr><td><strong><span>ProtonMail</span></strong></td><td><span>Conocido por su enfoque en la seguridad y privacidad, ofrece cifrado de extremo a extremo para proteger los correos electrónicos.</span></td><td><a href='https://proton.me/signup'><span>Crear cuenta en ProtonMail</span></a></td></tr><tr><td><strong><span>Apple Mail</span></strong></td><td><span>Parte del ecosistema Apple, permite sincronización con otros dispositivos Apple y servicios como iCloud.</span></td><td><a href='https://appleid.apple.com/account'><span>Crear cuenta en iCloud</span></a></td></tr></tbody></table></figure><p>&nbsp;</p><div class="md-alert md-alert-important important"><p><span class='md-alert-text md-alert-text-important'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</span><br></p><p><span>Una </span><strong><span>cuenta de Google</span></strong><span> te permite acceder a una variedad de servicios proporcionados por Google, como Google Drive, Google Calendar, Google Photos, y más. Por otro lado, una </span><strong><span>cuenta de Gmail</span></strong><span> es específicamente para gestionar tus correos electrónicos. Sin embargo, cuando creas una cuenta de Gmail, automáticamente obtienes una cuenta de Google, lo que te da acceso a todos los servicios de Google. Es decir, una cuenta de Gmail es una cuenta de Google con acceso adicional a Gmail.</span></p><p><span>Pasa lo mismo con una cuenta de Microsoft y el correo de Outlook (o Hotmail).</span></p></div><p>&nbsp;</p><p>&nbsp;</p><h2 id='glosario-de-términos-básicos'><span>Glosario de Términos Básicos</span></h2><p><span>Cada servicio de correo electrónico tiene su propia interfaz y características específicas, pero </span><strong><span>todos comparten ciertos elementos comunes</span></strong><span> que son fundamentales para el funcionamiento y la gestión de los correos electrónicos. </span></p><p><span>A continuación, se describen los términos básicos que encontrarás en casi todos los servicios de correo electrónico, lo que te ayudará a comprender y utilizar cualquier plataforma de manera más efectiva.</span></p><ul><li><p><strong><span>Destinatario (Para)</span></strong><span>: La persona o personas a las que se envía el correo electrónico. Se introduce la dirección de correo del destinatario en el campo &quot;Para&quot;.</span></p></li><li><p><strong><span>Asunto</span></strong><span>: El título o tema del correo electrónico. Debe ser breve y descriptivo para dar una idea clara del contenido del mensaje.</span></p></li><li><p><strong><span>CC (Con Copia)</span></strong><span>: Campo donde se introducen las direcciones de correo de personas que deben recibir una copia del correo electrónico. Todos los destinatarios pueden ver a quiénes más se ha enviado el mensaje.</span></p></li><li><p><strong><span>CCO (Con Copia Oculta)</span></strong><span>: Similar al campo CC, pero las direcciones de correo en el campo CCO son ocultas a los demás destinatarios. Se usa para proteger la privacidad de las direcciones de correo.</span></p></li><li><p><strong><span>Cuerpo del Mensaje</span></strong><span>: La parte principal del correo electrónico donde se escribe el mensaje. Puede incluir texto, imágenes, enlaces y otros elementos multimedia.</span></p></li><li><p><strong><span>Archivos Adjuntos</span></strong><span>: Archivos adicionales que se envían junto con el correo electrónico. Pueden ser documentos, imágenes, videos, entre otros. Los archivos adjuntos se agregan a través de una opción específica en la interfaz de correo electrónico. Normalmente suelen admitir “arrastrar y soltar” archivos.</span></p></li></ul><p><img src="img/03-internet/image-20240710105349460.png" referrerpolicy="no-referrer" alt="Ejemplo de ventana de redacción de un correo electrónico"></p><p><img src="img/03-internet/image-20240710110323508.png" referrerpolicy="no-referrer" alt="Ejemplo de redacción de nuevo correo electrónico enm Outlook"></p><h2 id='agrupaciones-más-comunes'><span>Agrupaciones más comunes</span></h2><p><span>La mayoría de los servicios de correo electrónico </span><strong><span>organizan los mensajes en diferentes carpetas o agrupaciones</span></strong><span> para facilitar su gestión y acceso. Aquí tienes una lista de las agrupaciones de correo más comunes:</span></p><ul><li><p><span>📥</span><strong><span>Bandeja de Entrada</span></strong><span>: Donde se almacenan los correos electrónicos recibidos. Es la carpeta principal que revisas para ver nuevos mensajes.</span></p></li><li><p><span>📤</span><strong><span>Bandeja de Salida</span></strong><span>: Almacena temporalmente los correos electrónicos que están en proceso de ser enviados. Una vez enviados, se trasladan a la carpeta de &quot;Enviados&quot;.</span></p></li><li><p><span>📨</span><strong><span>Enviados</span></strong><span>: Contiene todos los correos electrónicos que has enviado. Te permite revisar los mensajes que has enviado a otros destinatarios.</span></p></li><li><p><span>📝</span><strong><span>Borradores</span></strong><span>: Guarda los correos electrónicos que has comenzado a escribir pero aún no has enviado. Puedes volver a ellos para completarlos y enviarlos más tarde.</span></p></li><li><p><span>🚫</span><strong><span>Spam</span></strong><span>: Almacena correos electrónicos que el servicio ha identificado como correo no deseado o potencialmente malicioso. Es recomendable revisar esta carpeta ocasionalmente para asegurarte de que no contiene correos importantes.</span></p></li><li><p><span>🗑️</span><strong><span>Papelera</span></strong><span>: Contiene los correos electrónicos que has eliminado. Los mensajes en la papelera se pueden recuperar temporalmente antes de ser eliminados definitivamente.</span></p></li><li><p><span>🗄️</span><strong><span>Archivados</span></strong><span>: Permite almacenar correos electrónicos que ya no necesitas en tu bandeja de entrada pero que deseas conservar para futuras referencias. Los mensajes archivados no se eliminan.</span></p></li><li><p><span>❗</span><strong><span>Importantes</span></strong><span>: Algunos servicios permiten marcar correos electrónicos como importantes para destacarlos y acceder a ellos fácilmente.</span></p></li><li><p><span>🗃️</span><strong><span>Etiquetas o Categorías</span></strong><span>: Algunos servicios permiten etiquetar o categorizar correos electrónicos para una mejor organización. Las etiquetas pueden personalizarse según las necesidades del usuario.</span></p></li></ul><p><span>Estas agrupaciones ayudan a mantener tu correo electrónico organizado, facilitando la gestión y acceso a los mensajes según su estado y relevancia.</span></p></div></div>
+
+<!-- Inicio HTML añadido -->
+<!-- Botón flotante -->
+<a href="#top" title="Volver arriba" class="btn btn-primary btn-floating rounded-circle" >
+    <i class="bi bi-arrow-up"></i>
+</a>
+
+<!-- Footer -->
+<footer class="footer rounded-top-4 bg-gradient mt-5">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-12 mb-2">
+                <a href="https://meridianos.org/" target="_blank">
+                    <img src="/docs/img/assets/logo1.png" alt="Logo 1" class="footer-logo">
+                </a>
+            </div>
+            <div class="col-md-4 col-12 mb-2">
+                <a href="https://www.arelance.com/" target="_blank">
+                    <img src="/docs/img/assets/logo2.png" alt="Logo 2" class="footer-logo">
+                </a>
+            </div>
+            <div class="col-md-4 col-12 mb-2">
+                <img src="/docs/img/assets/logo3.png" alt="Logo 3" class="footer-logo">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Fin HTML añadido -->
+
+</body>
+</html>
